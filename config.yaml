@@ -1,0 +1,29 @@
+# fullsend organization configuration
+# https://github.com/fullsend-ai/fullsend
+#
+# This file is managed by fullsend. Manual edits may be overwritten.
+version: "1"
+dispatch:
+    platform: github-actions
+defaults:
+    roles:
+        - fullsend
+        - triage
+        - coder
+        - review
+    max_implementation_retries: 2
+    auto_merge: false
+agents:
+    - role: fullsend
+      name: JimFuller-scratch-fullsend
+      slug: jimfuller-scratch-fullsend
+    - role: triage
+      name: JimFuller-scratch-triage
+      slug: jimfuller-scratch-triage
+    - role: coder
+      name: JimFuller-scratch-coder
+      slug: jimfuller-scratch-coder
+    - role: review
+      name: JimFuller-scratch-review
+      slug: jimfuller-scratch-review
+repos: {}
